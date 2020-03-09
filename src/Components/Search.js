@@ -15,7 +15,7 @@ class Search extends React.Component {
           <input type="text" name="query" id="query" placeholder="ex, Harry Potter"></input>
           <input type="submit" value="Search"></input>
         </div>
-          <Filters />
+        <Filters />
       </form>
     )
   }

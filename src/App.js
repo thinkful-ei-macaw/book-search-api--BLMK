@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Search from './Components/Search';
+import Results from './Components/Results';
 
 class App extends React.Component {
   state = {
@@ -16,6 +17,7 @@ class App extends React.Component {
     return (
       <div>
         <Search onGetResults={this.handleGetResults}/>
+        <Results list={this.state.results}/>
       </div>
     );
   }
