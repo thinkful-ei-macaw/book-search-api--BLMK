@@ -7,7 +7,7 @@ class Results extends React.Component {
   render() {
     const books = this.props.list.map(book => {
       let price = 'FREE';
-      if (book.saleInfo.retailInfo && book.saleInfo.retailInfo.amount > 0){
+      if (book.saleInfo.retailPrice && book.saleInfo.retailPrice.amount > 0){
         price = book.saleInfo.retailPrice.amount + book.saleInfo.retailPrice.currencyCode;
       }
       return (
