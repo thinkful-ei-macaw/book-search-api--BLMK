@@ -1,5 +1,6 @@
 import React from 'react';
 import Filters from './Filters'
+import api from '../api'
 
 class Search extends React.Component {
   state = {
@@ -16,10 +17,8 @@ class Search extends React.Component {
       query += `&${key}=${this.state[key]}`
     });
 
-    console.log(query);
-    // call api
-    // then
-    //   this.props.onGetResults(data);
+    api.getBooks(query)
+    .then((data) => this.props.onGetResults(data))
   }
 
   handleFilterChange = (property, value) => {

@@ -9,8 +9,8 @@ class App extends React.Component {
     results: []
   }
 
-  handleGetResults(){
-    
+  handleGetResults = (data) =>{
+    this.setState({results: data.items})
   }
 
   render(){

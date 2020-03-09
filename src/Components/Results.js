@@ -6,10 +6,11 @@ class Results extends React.Component {
     const books = this.props.list.map(book => {
       return (
         <Book
-          imageUrl={book.imageLinks.thumbnail}
+          key={book.id}
+          imageUrl={book.volumeInfo.imageLinks.thumbnail}
           title={book.volumeInfo.title}
-          author={book.volumneInfo.authors[0]}
-          price={book.retailPrice.amount + book.retailPrice.currencyCode}
+          author={book.volumeInfo.authors[0]}
+          price={book.saleInfo.retailPrice.amount + book.saleInfo.retailPrice.currencyCode}
           description={book.description}/>
       );
     });
