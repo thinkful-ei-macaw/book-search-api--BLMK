@@ -1,4 +1,5 @@
 import React from 'react';
+import Filters from './Filters'
 
 class Search extends React.Component {
   handleSubmit(){
@@ -14,7 +15,7 @@ class Search extends React.Component {
           <input type="text" name="query" id="query" placeholder="ex, Harry Potter"></input>
           <input type="submit" value="Search"></input>
         </div>
-        
+          <Filters />
       </form>
     )
   }
