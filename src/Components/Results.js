@@ -5,7 +5,7 @@ import './Results.css';
 
 class Results extends React.Component {
   render() {
-    const books = this.props.list.map(book => {
+    const books = this.props.list.length >  0 ? this.props.list.map(book => {
       let price = 'FREE';
       if (book.saleInfo.retailPrice && book.saleInfo.retailPrice.amount > 0){
         price = book.saleInfo.retailPrice.amount + book.saleInfo.retailPrice.currencyCode;
@@ -17,9 +17,10 @@ class Results extends React.Component {
           title={book.volumeInfo.title}
           author={book.volumeInfo.authors ? book.volumeInfo.authors[0] : 'Unkown'}
           price={price}
-          description={book.description}/>
+          url={book.volumeInfo.previewLink}
+          description={book.volumeInfo.description}/>
       );
-    });
+    }) : this.props.searched ? (<p className="noresults"> No results found! </p>) : '';
 
     return (
       <ul className="results">

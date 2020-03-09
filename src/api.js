@@ -6,6 +6,9 @@ function getBooks(query) {
     .then(data => {
       return data;
     })
+  .catch(err => {
+    alert(`Error: ${err}`)
+  })
 }   
 
 export default {getBooks} ;

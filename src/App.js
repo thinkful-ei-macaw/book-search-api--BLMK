@@ -6,25 +6,22 @@ import Results from './Components/Results';
 
 class App extends React.Component {
   state = {
-    results: []
+    results: [],
+    searched: false
   }
 
   handleGetResults = (data) => {
-    if (data.totalItems > 0) {
-      this.setState({
-        results: data.items
-      })
-    } else {
-      alert("No items matched your search");
-    }
-    
+    this.setState({
+     results: data.items || [],
+     searched: true
+   })
   }
 
   render(){
     return (
       <div>
         <Search onGetResults={this.handleGetResults}/>
-        <Results list={this.state.results}/>
+        <Results searched={this.state.searched} list={this.state.results}/>
       </div>
     );
   }
