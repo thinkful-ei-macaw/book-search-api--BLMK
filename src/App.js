@@ -9,8 +9,15 @@ class App extends React.Component {
     results: []
   }
 
-  handleGetResults = (data) =>{
-    this.setState({results: data.items})
+  handleGetResults = (data) => {
+    if (data.totalItems > 0) {
+      this.setState({
+        results: data.items
+      })
+    } else {
+      alert("No items matched your search");
+    }
+    
   }
 
   render(){

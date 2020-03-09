@@ -1,4 +1,5 @@
 import React from 'react';
+import './Filters.css';
 
 class Filters extends React.Component {
 
@@ -10,7 +11,7 @@ class Filters extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="filters">
         <label htmlFor="printType">Print Type: </label>
         <select id="printType" name="printType" onChange={this.handleChange}>
           <option value="all"> All</option>

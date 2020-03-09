@@ -1,0 +1,13 @@
+.filters {
+  background: lightgray;
+  text-align: center;
+  padding: .4rem;
+}
+
+.filters select {
+  margin-left: .3rem;
+}
+
+.filters select:first-of-type {
+  margin-right: 3rem;
+}

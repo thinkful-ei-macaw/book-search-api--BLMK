@@ -1,0 +1,14 @@
+.search {
+  background: grey;
+  padding: 1rem;
+  text-align: center;
+}
+
+.search input {
+  margin-left: 0.5rem;
+  padding: .2rem .4rem;
+}
+
+.search input[type=submit] {
+  margin-left: 0;
+}

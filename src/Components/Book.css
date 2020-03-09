@@ -1,0 +1,18 @@
+.book {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+
+.book img {
+  height: 9rem;
+  margin-right: 2rem;
+}
+
+.book h2, .book p {
+  margin: 0;
+}
+
+.book p:last-of-type {
+  margin-top: 1rem;
+}

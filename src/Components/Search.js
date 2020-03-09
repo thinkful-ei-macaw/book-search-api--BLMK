@@ -1,6 +1,8 @@
 import React from 'react';
-import Filters from './Filters'
-import api from '../api'
+import Filters from './Filters';
+import api from '../api';
+
+import './Search.css';
 
 class Search extends React.Component {
   state = {
@@ -30,7 +32,7 @@ class Search extends React.Component {
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
-        <div>
+        <div className="search">
           <label htmlFor="query">Search:</label>
           <input required type="text" name="query" id="query" placeholder="ex, Harry Potter"></input>
           <input type="submit" value="Search"></input>
